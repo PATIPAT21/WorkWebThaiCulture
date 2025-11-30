@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+ 
+  <meta charset="UTF-8">
+  <title>หน้าเข้าสู่ระบบ</title>
+ <link rel="stylesheet" href="css/de-log.css">
+<body>
+  <div class="login-container">
+    <h2>เข้าสู่ระบบ</h2>
+    <form action="login.php" method="post">
+      <label for="username">ชื่อผู้ใช้</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">รหัสผ่าน</label>
+      <input type="password" id="password" name="password" required>
+      <nav>
+      <button onclick="goToHome(event)">เข้าสู่ระบบ</button>
+      <a href="signup.html">สมัครสมาชิก</a>
+      </nav>
+      </form>
+      
+    </div>
+    
+    <script>
+        function goToHome(event) {
+          event.preventDefault();
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          if (username === "" || password === "") {
+            return("กรุณากรอกชื่อผู้ใช้และรหัสผ่านให้ครบถ้วน");
+          } else {
+            window.location.href = "index.html";
+          }
+        }
+      </script>
+    <footer>
+        <p>made by 67162110423-2</p>
+      </footer>
+   
+    
+</body>
+</html>
